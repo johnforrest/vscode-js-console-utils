@@ -2,7 +2,7 @@
     "name": "vscode-js-console-utils",
     "displayName": "javascript console utils",
     "description": "Help insert and remove console.(*) statements",
-    "version": "0.7.0",
+    "version": "0.8.0",
     "publisher": "whtouche",
     "repository": "https://github.com/whtouche/vscode-js-console-utils",
     "engines": {
@@ -21,10 +21,6 @@
             {
                 "command": "extension.insertLogStatement",
                 "title": "Insert Log Statement"
-            },
-            {
-                "command": "extension.deleteAllLogStatements",
-                "title": "Delete all console.log statements"
             }
         ],
         "keybindings": [
@@ -33,12 +29,8 @@
                 "key": "shift+ctrl+l",
                 "mac": "shift+cmd+l",
                 "when": "editorTextFocus"
-            },
-            {
-                "command": "extension.deleteAllLogStatements",
-                "key": "shift+ctrl+d",
-                "mac": "shift+cmd+d"
             }
+         
         ]
     },
     "scripts": {

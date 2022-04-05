@@ -59,7 +59,9 @@ function activate(context) {
         text
             ? vscode.commands.executeCommand('editor.action.insertLineAfter')
                 .then(() => {
-                    const logToInsert = `console.log('${text}: ', ${text});`;
+                    // const logToInsert = `console.log('${text}: ', ${text});`;
+                    const str = `${text}`.replace(/\'|\"/g, '');
+                    const logToInsert = `console.log('%c${str}: ','color: MidnightBlue; background: Aquamarine; font-size: 20px;',${text});`;
                     insertText(logToInsert);
                 })
             : insertText('console.log();');
